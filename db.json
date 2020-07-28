@@ -1,0 +1,16 @@
+{
+  "menuBar": [
+    {
+      "id": 1,
+      "name": "hello",
+      "category": "coffe"
+    }
+  ],
+  "menuKitchen": [
+    {
+      "id": 0,
+      "name": "kek",
+      "categor": "salat"
+    }
+  ]
+}
