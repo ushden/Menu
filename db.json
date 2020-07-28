@@ -3,7 +3,26 @@
     {
       "id": 1,
       "name": "hello",
-      "category": "coffe"
+      "category": "coffe",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "category": "test",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 3,
+      "name": "kokokok",
+      "category": "coffe",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
     }
   ],
   "menuKitchen": [
