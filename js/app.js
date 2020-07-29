@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
 
 // request menu from server
 function requestMenu() {
-  const url = '../db.json';
+  const url = 'https://github.com/ushden/Menu/blob/master/db.json';
 
   return fetch(url).then(response => {
       return response.json();
