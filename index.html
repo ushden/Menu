@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/9f83d95e6b.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
   <title>Меню - Ресторан "Веранда"</title>
 </head>
 
@@ -17,16 +17,31 @@
 
   <section class="menu">
     <!-- title -->
-    <div class="title">
+    <div class="title hide">
       <h2>Наше меню</h2>
       <div class="underline"></div>
     </div>
     <!-- filter buttons -->
-    <div class="btn-container">
+    <div class="btn-container hide">
       <!-- Dynamic add btns -->
     </div>
     <div class="section-center">
-      <!-- menu items -->      
+      <div class="logo-container">
+        <img src="https://nizhyn-city.com.ua/wp-content/uploads/2020/01/logo-veranda.png" alt="logo">
+      </div>
+      <div class="description">
+        <p>Добро пожаловать в наш ресторан</p>
+        <p>Наше меню к Вашим услугам</p>
+      </div>
+      <!-- menu items -->
+      <ul class="links">
+        <li>
+          <a href="/" data-id="bar"><i class="fas fa-wine-glass-alt"></i> Бар</a>
+        </li>
+        <li>
+          <a href="/" data-id="kitchen"><i class="fas fa-utensils"></i> Кухня</a>
+        </li>
+      </ul>  
     </div>
   </section>
 
@@ -36,16 +51,16 @@
 
   <aside class="sidebar">
     <div class="sidebar-header">
-      <img src="/img/preloader.gif" class="logo" alt="logo bydet" />
+      <img src="https://nizhyn-city.com.ua/wp-content/uploads/2020/01/logo-veranda.png" class="logo" alt="logo" />
       <button class="close-btn"><i class="fas fa-times"></i></button>
     </div>
     <!-- links -->
     <ul class="links">
       <li>
-        <a href="index.html">Бар</a>
+        <a href="/" data-id="bar"><i class="fas fa-wine-glass-alt"></i> Бар</a>
       </li>
       <li>
-        <a href="about.html">Кухня</a>
+        <a href="/" data-id="kitchen"><i class="fas fa-utensils"></i> Кухня</a>
       </li>
     </ul>
     <!-- social media -->
@@ -63,8 +78,11 @@
     </ul>
   </aside>
 
+  <div class="arrow-top hide animation">
+    <i class="far fa-arrow-alt-circle-up"></i>
+  </div>
 
-  <script src="js/app.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 {
-  "menuBar": [
-    {
+  "menuBar": [{
       "id": 1,
       "name": "hello",
       "category": "coffe",
@@ -11,7 +10,72 @@
     {
       "id": 2,
       "name": "test",
-      "category": "test",
+      "category": "coffe",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 3,
+      "name": "kokokok",
+      "category": "alcohol",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 4,
+      "name": "kokokok",
+      "category": "alcohol",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 5,
+      "name": "kokokok",
+      "category": "water",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 6,
+      "name": "kokokok",
+      "category": "juce",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 7,
+      "name": "kokokok",
+      "category": "cocteils",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    },
+    {
+      "id": 8,
+      "name": "kokokok",
+      "category": "alcCocteilas",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
+    }
+  ],
+  "menuKitchen": [{
+      "id": 1,
+      "name": "Цезарь",
+      "category": "Салаты",
+      "img": "https://cooklikemary.ru/sites/default/files/shashlyk-1-3_0.jpg",
+      "price": "19.99",
+      "desc": "Секрет вкусного салата во вкусном соусе. Это салат на все случаи жизни и времена года, но больше всего мне хочется его именно летом. Так как он легкий, но в тоже время сытный, к нему в дуэт больше готовить ничего не надо, разве только бокал вина."
+    },
+    {
+      "id": 2,
+      "name": "chizcake",
+      "category": "desert",
       "img": "img/preloader.gif",
       "price": "19.99",
       "desc": "Создавать базу данных сложно"
@@ -23,13 +87,14 @@
       "img": "img/preloader.gif",
       "price": "19.99",
       "desc": "Создавать базу данных сложно"
-    }
-  ],
-  "menuKitchen": [
+    },
     {
-      "id": 0,
-      "name": "kek",
-      "categor": "salat"
+      "id": 4,
+      "name": "kokokok",
+      "category": "coffe",
+      "img": "img/preloader.gif",
+      "price": "19.99",
+      "desc": "Создавать базу данных сложно"
     }
   ]
 }
