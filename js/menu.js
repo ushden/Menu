@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
 
 // request menu from server
 function requestMenu() {
-  const url = '../db.json';
+  const url = '../db.json';  // https://nizhyn-city.com.ua/data/db.json
 
   return fetch(url).then(response => {
       return response.json();
@@ -130,7 +130,7 @@ function displayMenu(menu) {
 
   menu.forEach(item => {
     const menuCard = `
-      <article class="menu-item animation">
+      <article class="menu-item animation-menu">
         <img src="${item.img}" alt="${item.name}" class="photo" data-id="${item.id}">
         <div class="item-info">
           <header>
@@ -174,7 +174,7 @@ function showPopup(data) {
 
     popup.classList.add('popup');
     popup.classList.add('hide');
-    popup.classList.add('animated');
+    popup.classList.add('animation');
 
 
     data.forEach(item => {

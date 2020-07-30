@@ -78,31 +78,8 @@
       "category": "Салаты",
       "img": "https://cooklikemary.ru/sites/default/files/shashlyk-1-3_0.jpg",
       "price": "19.99",
+      "composition": [""],
       "desc": "Секрет вкусного салата во вкусном соусе. Это салат на все случаи жизни и времена года, но больше всего мне хочется его именно летом. Так как он легкий, но в тоже время сытный, к нему в дуэт больше готовить ничего не надо, разве только бокал вина."
-    },
-    {
-      "id": 2,
-      "name": "chizcake",
-      "category": "desert",
-      "img": "img/preloader.gif",
-      "price": "19.99",
-      "desc": "Создавать базу данных сложно"
-    },
-    {
-      "id": 3,
-      "name": "kokokok",
-      "category": "coffe",
-      "img": "img/preloader.gif",
-      "price": "19.99",
-      "desc": "Создавать базу данных сложно"
-    },
-    {
-      "id": 4,
-      "name": "kokokok",
-      "category": "coffe",
-      "img": "img/preloader.gif",
-      "price": "19.99",
-      "desc": "Создавать базу данных сложно"
     }
   ]
 }

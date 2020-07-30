@@ -394,7 +394,7 @@ Sidebar
   align-self: center;
 }
 
-@keyframes opacityHide {
+@keyframes hide {
   0% {
     opacity: 1;
   }
@@ -406,27 +406,32 @@ Sidebar
   }
 }
 
-@keyframes opacityShow {
+@keyframes show {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: .5;
+    transform: translateY(-1000px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.hide {
-  z-index: -9999;
-  animation: opacityHide 1s ease-in-out;
-  opacity: 0;
-  transition: .3s;
+@keyframes up {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .animation {
-  animation: opacityShow 1.5s ease-in-out;
+  animation: show .5s ease-in-out;
+}
+
+.animation-menu {
+  animation: up .5s ease-in-out;
 }
 
 .sub-title {
@@ -446,16 +451,10 @@ Sidebar
 }
 
 .hide {
-  display: none;
   opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: 5s;
+  transition: 1s;
   transform: translateY(-1000px);
+  animation: hide 1s ease-in-out;
 }
 .description {
   text-align: center;
@@ -484,8 +483,6 @@ Sidebar
   right: 0;
   bottom: 0;
   background-color: #fff;
-  transform: translateY(0);
-  transition: transform 5s ease-in-out;
 }
 
 .popup-close {
