@@ -42,10 +42,10 @@ function showSideBarAndLinks() {
 function toggleSideBar() {
   sideBar.classList.toggle('show-sidebar');
 
-  if (sideBar.classList.contains('show-sidebar')) {
-    document.body.style.overflowX = 'hidden';
+  if (!sideBar.classList.contains('show-sidebar')) {
+    document.body.style.overflow = '';
   } else {
-    document.body.style.overflowX = 'auto';
+    document.body.style.overflow = 'hidden';
   }
 }
 
@@ -75,10 +75,6 @@ function getMenuData(data) {
         displayMenu(menuBar);
         showPopup(menuBar);
 
-        sideBar.classList.remove('show-sidebar');
-        titleEl.classList.remove('hide');
-        btnContainer.classList.remove('hide');
-
         spanEl.innerHTML = 'Бар';
       } else if (target.dataset.id === 'kitchen') {
         filterMenu(menuKitchen);
@@ -86,12 +82,18 @@ function getMenuData(data) {
         displayMenu(menuKitchen);
         showPopup(menuKitchen);
 
-        sideBar.classList.remove('show-sidebar');
-        titleEl.classList.remove('hide');
-        btnContainer.classList.remove('hide');
-
         spanEl.innerHTML = 'Кухня';
       }
+      document.body.style.overflow = '';
+
+      sideBar.classList.remove('show-sidebar');
+      titleEl.classList.remove('hide');
+      btnContainer.classList.remove('hide');
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   });
 
@@ -133,10 +135,10 @@ function displayMenu(menu) {
         <div class="item-info">
           <header>
             <h4>${item.name}</h4>
-            <h4 class="price">$${item.price}</h4>
+            <h4 class="price">${item.price} грн.</h4>
           </header>
           <p class="item-text">
-            ${item.desc}
+            Клик на фото, для детальной информации
           </p>
         </div>
       </article>
@@ -173,9 +175,15 @@ function showPopup(data) {
     popup.classList.add('popup');
     popup.classList.add('hide');
     popup.classList.add('animated');
-    
+
+
     data.forEach(item => {
       if (id == item.id) {
+        let li = '';
+        for(let composition of item.composition) {
+          li += `<li>${composition}</li>`;
+        }
+
         const popupBody = `
         <div class="popup-close">
           <i class="fas fa-times"></i>
@@ -185,16 +193,20 @@ function showPopup(data) {
         </div>
         <div class="popup-body">
           <h3>${item.name}</h3>
+          <p>${item.desc}</p>
+          <p class="list-title">Дополнительная информация:</p>
+          <ul class="composition">${li}</ul>
         </div>`;
 
         popup.innerHTML = popupBody;
+        popup.style.overflowY = 'auto';
 
         popup.classList.remove('hide');
         document.body.appendChild(popup);
-        document.body.style.overflowY = 'hidden';
+        document.body.style.overflow = 'hidden';
+        closePopup();
       }
     });
-    closePopup();
   });
 }
 
@@ -204,9 +216,9 @@ function closePopup() {
   closePopupBtn.addEventListener('click', event => {
     const target = event.target;
 
-    if(target.classList.contains('fa-times')) {
+    if (target.classList.contains('fa-times')) {
       popup.classList.add('hide');
-      document.body.style.overflowY = 'auto';
+      document.body.style.overflow = '';
     }
   });
 }
