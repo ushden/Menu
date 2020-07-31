@@ -77,12 +77,14 @@ function getMenuData(data) {
 
         spanEl.innerHTML = 'Бар';
       } else if (target.dataset.id === 'kitchen') {
-        filterMenu(menuKitchen);
-        displayButtons(menuKitchen);
-        displayMenu(menuKitchen);
-        showPopup(menuKitchen);
+        // filterMenu(menuKitchen);
+        // displayButtons(menuKitchen);
+        // displayMenu(menuKitchen);
+        // showPopup(menuKitchen);
 
-        spanEl.innerHTML = 'Кухня';
+        // spanEl.innerHTML = 'Кухня';
+
+        alert('Идет работа над меню');
       }
       document.body.style.overflow = '';
 
